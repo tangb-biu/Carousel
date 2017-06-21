@@ -6,12 +6,10 @@
  */
 function createDom(id, type, painter, dpr) {
 	let newDom = document.createElement(type);
-	let width = painter.getWidth();
-	let height = painter.getHeight();
+	let width = painter.width;
+	let height = painter.height;
 
 	let newDomStyle = newDom.style;
-
-	newDomStyle.position = 'absolute';
 	newDomStyle.left = 0;
 	newDomStyle.top = 0;
 	newDomStyle.width = width + 'px';
@@ -32,3 +30,5 @@ function createDom(id, type, painter, dpr) {
 	newDom.setAttribute('data-fr-dom-id', id);
 	return newDom;	
 }
+
+export { createDom }

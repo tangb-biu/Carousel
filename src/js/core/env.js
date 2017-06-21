@@ -54,8 +54,8 @@ function detect(ua) {
 
 		touchEventsSupported: 'ontouchstart' in window && !browser.ie && !browser.edge,
 
-		pointerEventsSupported: 'onpointerdown' in $window && (browser.edge || (browser.ie && browser.version >= 11))
+		pointerEventsSupported: 'onpointerdown' in window && (browser.edge || (browser.ie && browser.version >= 11))
 	}
 }
 
-export {env}
+export { env }

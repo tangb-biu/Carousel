@@ -59,9 +59,9 @@ module.exports = function(env) {
 		devtool: '#source-map',
 
 		plugins: [
-			new webpack.optimize.UglifyJsPlugin({
-				//compress: //env.production
-			}),
+			// new webpack.optimize.UglifyJsPlugin({
+			// 	//compress: //env.production
+			// }),
 
 			new webpack.HotModuleReplacementPlugin(),
 
@@ -92,7 +92,7 @@ module.exports = function(env) {
 
 		devServer: {
 			contentBase: path.join(__dirname, 'dist'),
-			compress: true,
+			//compress: true,
 			port: 9999,
 			hot: true
 		}

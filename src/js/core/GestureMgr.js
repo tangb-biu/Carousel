@@ -1,5 +1,5 @@
 
-import eventUtil from './event'
+import { clientToLocal } from './event'
 
 var GestureMgr = function () {
 
@@ -40,7 +40,7 @@ GestureMgr.prototype = {
 
         for (var i = 0, len = touches.length; i < len; i++) {
             var touch = touches[i];
-            var pos = eventUtil.clientToLocal(root, touch, {});
+            var pos = clientToLocal(root, touch, {});
             trackItem.points.push([pos.zrX, pos.zrY]);
             trackItem.touches.push(touch);
         }
@@ -111,4 +111,4 @@ var recognizers = {
     // Only pinch currently.
 };
 
-export GestureMgr;
+export { GestureMgr };

@@ -65,7 +65,7 @@ Eventful.prototype = {
 
 		_h[event].push({
 			h: handler,
-			one: true,
+			one: false,
 			ctx: context || this
 		});
 
@@ -162,7 +162,7 @@ Eventful.prototype = {
 		}
 
 		return this;
-	}
+	},
 	/**
 	 * 分发事件, 有context的事件
 	 * 
@@ -211,4 +211,4 @@ Eventful.prototype = {
 	}
 }
 
-export {Eventful}
+export { Eventful }

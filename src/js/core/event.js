@@ -1,5 +1,5 @@
 import { env } from './env'
-import { Eventful } from './eventful'
+import { Eventful as Dispatcher } from './eventful'
 
 let isDomLevel2 = (typeof window !== 'undefined') && !!window.addEventListener;
 
@@ -85,10 +85,10 @@ let stop = isDomLevel2
 	};
 
 export {
-	clientToLocal: clientToLocal,
-	normalizeEvent: normalizeEvent,
-	addEventListener: addEventListener,
-	removeEventListener: removeEventListener,
-	stop: stop,
-	Dispatcher: Eventful
+	clientToLocal,
+	normalizeEvent,
+	addEventListener,
+	removeEventListener,
+	stop,
+	Dispatcher
 }

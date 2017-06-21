@@ -1,8 +1,8 @@
 import { addEventListener, removeEventListener, normalizeEvent} from './event'
 import zrUtil from './util'
-import Eventful from './Eventful'
-import env from './env'
-import GestureMgr from './GestureMgr'
+import { Eventful } from './eventful'
+import { env } from './env'
+import { GestureMgr } from './GestureMgr'
 
 
 const TOUCH_CLICK_DELAY = 300;
@@ -368,7 +368,7 @@ handlerDomProxyProto.setCursor = function (cursorStyle) {
 
 zrUtil.mixin(HandlerDomProxy, Eventful);
 
-export HandlerDomProxy;
+export { HandlerDomProxy };
 
 
 

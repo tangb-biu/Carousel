@@ -506,7 +506,8 @@ function uuid() {
         return (~~(Math.random()*16)).toString(16);
     })
 }
-export {
+function noop() {}
+export default {
     inherits,
     mixin,
     clone,
@@ -537,5 +538,5 @@ export {
     assert,
     setAsPrimitive,
     uuid,
-    noop: function () {}
+    noop
 }
