@@ -2,11 +2,11 @@
 * @module frender/Element
 */
 
-var guid = require('./core/guid');
-var Eventful = require('./mixin/Eventful');
-var Transformable = require('./mixin/Transformable');
-var Animatable = require('./mixin/Animatable');
-var zrUtil = require('./core/util');
+import guid from './core/guid';
+import { Eventful } from './core/eventful';
+import { Transformable } from './core/Transformable';
+import { Animatable } from './core/Animatable';
+import zrUtil = './core/util';
 
 /**
  * @alias module:frender/Element
